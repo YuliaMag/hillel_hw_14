@@ -83,17 +83,16 @@ class Pixel:
             return (self.red, self.green, self.blue) == (other.red, other.green, other.blue)
         return False
 
-    # def __str__(self):
-    #     return f"Pixel:\t\nRed: {self.red}, Green: {self.green}, Blue: {self.blue}"
-
-    # def __repr__(self):
-    #     return f"Pixel({self.red}, {self.green}, {self.blue})"
-
-    # Frankly.. I don't know. I'm trying to make them work simultaneously, but they don't want to
     def __str__(self):
-        if hasattr(self, "__repr__"):
-            # return self.__repr__()
-            return f"Pixel({self.red}, {self.green}, {self.blue})"
-        else:
-            return f"Pixel:\t\nRed: {self.red}, Green: {self.green}, Blue: {self.blue}"
+        return f"Pixel:\t\nRed: {self.red}, Green: {self.green}, Blue: {self.blue}"
+
+    def __repr__(self):
+        return f"Pixel({self.red}, {self.green}, {self.blue})"
+
+    # def __str__(self):
+    #     if hasattr(self, "__repr__"):
+    #         # return self.__repr__()
+    #         return f"Pixel({self.red}, {self.green}, {self.blue})"
+    #     else:
+    #         return f"Pixel:\t\nRed: {self.red}, Green: {self.green}, Blue: {self.blue}"
 
